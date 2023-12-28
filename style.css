@@ -19,6 +19,8 @@ body{
     flex-direction: column;
     gap: 50px;
     align-items: center;
+    background-image: url(fondo.png);
+    background-size: contain;
 }
 
 .caja-logo{
