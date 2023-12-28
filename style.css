@@ -12,7 +12,7 @@ body{
 .formulario{
     background-color: grey;
     width: 40%;
-    padding: 3em;
+    padding:5em 3em 3em 3em;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -21,7 +21,6 @@ body{
     align-items: center;
     background-image: url(fondo.png);
     background-size: contain;
-
 }
 
 /*ACA ESTA LA CAJA QUE CONTIENE EL LOGO, POR AHORA LA SAQUE PARA PROBAR EL LOGO ORIGINAL DE LA FOTO*/
@@ -58,7 +57,7 @@ body{
 .cajaprueba{
     position: absolute;
     top: -90px;
-    background-color: rgb(156, 153, 153);
+    background-color: rgb(255, 255, 255);
     border-radius: 15px 60px 25px 50px;
     padding: 10px;
     width: 50%;
