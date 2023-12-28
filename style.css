@@ -21,18 +21,26 @@ body{
     align-items: center;
     background-image: url(fondo.png);
     background-size: contain;
+
 }
 
+/*ACA ESTA LA CAJA QUE CONTIENE EL LOGO, POR AHORA LA SAQUE PARA PROBAR EL LOGO ORIGINAL DE LA FOTO*/
+/*
 .caja-logo{
     width: 400px;
-    height: auto;
+    height: 100px;
+    border: 2px solid red;
+    background-image: url(logo.png);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .caja-logo img{
     width: 400px;
     height: 100px;
     display: flex;
-}
+}*/
 
 .caja-padre{
     background-color: rgb(255, 255, 255);
@@ -42,7 +50,28 @@ body{
     max-height: 300px;
     font-size: 1.3em;
     box-shadow: 5px 2px 2px rgb(66, 62, 62);
+    position: relative;
+    z-index: 2;
 }
+
+/*CAJA PRUEBA PARA LOGO*/
+.cajaprueba{
+    position: absolute;
+    top: -90px;
+    background-color: rgb(156, 153, 153);
+    border-radius: 15px 60px 25px 50px;
+    padding: 10px;
+    width: 50%;
+    height: 100px;
+    max-height: 300px;
+    font-size: 1.3em;
+    z-index: 1;
+    background-image: url(logo.png);
+    background-size:contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
 
 .linea-decorativa{
     border: 10px solid white;
@@ -200,3 +229,31 @@ button{
     font-style: oblique;
     letter-spacing:0.1vw;
 }
+
+
+/*Media queries para dispositivos con menor resolucion*/
+
+@media only screen and (max-width: 1200px) and (min-width:900px) {
+    .caja-logo{
+  
+    }
+    
+    .caja-logo img{
+        width: 200px;
+        height: 50px;
+        display: flex;
+    }
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 501px) {
+    
+
+}
+
+@media only screen and (max-width: 500px) {
+
+   
+}
+
+
