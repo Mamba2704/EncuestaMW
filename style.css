@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-style: italic;
+    color: rgb(60, 58, 58);
+}
+
+.formulario{
+    background-color: grey;
+    width: 40%;
+    padding: 3em;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    background-image: url(fondo.png);
+    background-size: contain;
+}
+
+.caja-logo{
+
+}
+
+.logo-img{
+
+}
+
+.caja-padre{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 80px 25px 80px;
+    padding: 10px;
+    width: 80%;
+    max-height: 300px;
+    font-size: 1.3em;
+    box-shadow: 5px 2px 2px rgb(66, 62, 62);
+}
+
+.linea-decorativa{
+    border: 10px solid white;
+    border-radius: 25px 80px 20px 80px;
+    border-color: transparent transparent #e1850b transparent; 
+    padding: 10px;
+    width: 90%;
+}
+
+.caja-hija{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    flex-direction: column;
+    justify-content: center;
+    text-align:left;
+
+}
+
+
+.caja-checkbox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.7em;
+    margin-bottom: 5px;
+}
+
+.caja-texto-libre{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    width: 80%;
+    max-height: 50px;
+    max-width: 80%;
+    margin: 5px;
+}
+
+/*RADIO*/
+
+
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #e6e6e6;
+    -webkit-text-stroke: 0.4px black;
+}
+
+.radio .rojo{
+    display: inline-flex;
+    cursor: pointer;
+    margin: 2px;
+	width: 35px;
+	height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgb(186, 40, 40);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.radio .amarillo{
+    display: inline-flex;
+    cursor: pointer;
+    margin: 2px;
+	width: 35px;
+	height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgb(192, 192, 22);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.radio .verde{
+    display: inline-flex;
+    cursor: pointer;
+    margin: 2px;
+	width: 35px;
+	height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgb(0, 189, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.radio input[type="radio"] {                /*elimina el selector del puntaje redondito :)*/
+    display: none;
+}
+
+.radio .rojo:hover {                        /*ESTO CONTROLA EL COLOR QUE TOMAN LOS REDONDITOS CUANDO PASAMOS EL CURSOR*/
+	background-color: rgb(255, 0, 0);
+}
+
+.radio .amarillo:hover {
+	background-color: rgb(255, 247, 0);
+}
+
+.radio .verde:hover {
+	background-color: rgb(66, 255, 88);
+}
+
+.radio input[type="radio"].rojo:checked + label {       /*ESTO CONTROLA EL COLOR CUANDO HACEMOS CLICK(UNO POR CADA COLOR)*/
+    background-color: rgb(255, 0, 0);	
+}
+
+.radio input[type="radio"].amarillo:checked + label {
+    background-color: rgb(255, 247, 0);	
+}
+
+.radio input[type="radio"].verde:checked + label {
+    background-color: rgb(66, 255, 88);	
+}
+
+#comentario{
+    font-size: 0.7em;                                /*esto aplica solo a la parte del puntaje*/
+    font-weight: bold;
+    text-align: center;
+}
+
+/*SEGUNDA CAJA, CHECKBOX*/
+.caja-checkbox{
+    font-size: 0.8em;
+    border: 2px solid red;
+}
+
+.caja-checkbox div{
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+/*BOTON ENVIAR*/
+
+.caja-boton{
+    background-color: white;
+    width: 20%;
+    padding: 5px ;
+    border-radius: 10px ;
+    display: flex; 
+    align-items: center;
+    justify-content: center;  
+    box-shadow: 5px 2px 2px rgb(66, 62, 62);
+}
+
+button{
+    border: none;
+    background-color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #4b4b4b;
+    font-size: 1vw;
+    font-style: oblique;
+    letter-spacing:0.1vw;
+}
