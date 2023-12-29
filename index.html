@@ -8,12 +8,12 @@
 </head>
 <body>
     <form action ="" class="formulario" method="post">
-        <div class="caja-logo">                                <!--PRIMERA CAJA PADRE-->
-            
+        <div class="caja-logo">                                <!-- CAJA LOGO DISPOSITIVOS PEQUEÑOS-->
+            <img src="logo2.png" alt="">
         </div>
 
         <div class="caja-padre">                              <!--PRIMERA CAJA PADRE-->
-            <div class="cajaprueba">                         <!--PRIMERA CAJA HIJA-->
+            <div class="cajaprueba">                         
                     <img src="logo.png" alt="">
             </div>
             
@@ -23,10 +23,31 @@
                     
                 </div>-->
 
-                <div class="caja-hija">                         <!--PRIMERA CAJA HIJA-->
+                <div class="caja-hija">                         
                     <p>Basándote en tu experiencia con el último pedido recibido, ¿Cuánto recomendarías Marlew a un colega? *</p>
                 </div>
                 <div class="caja-hija">
+                    <!--
+                        ACA ESTA EL SELECTOR DE PUNTAJE PARA DISPOSITIVOS PEQUEÑOS
+                    -->
+                    <div class="caja-hija">                         
+                        <select id="menu-selector">
+                            <option value="inicio">1</option>
+                            <option value="acerca">2</option>
+                            <option value="servicios">3</option>
+                            <option value="contacto">4</option>
+                            <option value="contacto">5</option>
+                            <option value="contacto">6</option>
+                            <option value="contacto">7</option>
+                            <option value="contacto">8</option>
+                            <option value="contacto">9</option>
+                            <option value="contacto">10</option>
+                        </select>
+                    </div>
+                    <label for="menu-selector" id="mobile-menu-label">Selecciona un Puntaje:</label>
+                    <!--
+                        TERMINA ACA
+                    -->
                     <div class="radio">
                         <input type="radio" value="0" id="ppto0" name="ppto" class="rojo">
                         <label for="ppto0" class="rojo">0</label>
@@ -60,9 +81,26 @@
 
         <div class="caja-padre">                                <!--SEGUNDA CAJA PADRE-->
             <div class="linea-decorativa">
-                <div class="caja-hija">                         <!--SEGUNDA CAJA HIJA-->
+                <div class="caja-hija">                         
                     <p>¿Qué parte de tu experiencia, es la principal responsable de tu puntuación?</p>
                 </div>
+                <!--
+                    ACA VA EL SELECTOR DESPLEGABLE DE PRUEBA PARA DISPOSITIVOS PEQUEÑOS
+                -->
+                <div class="caja-hija">                        
+                    <select id="menu-selector">
+                        <option value="inicio">Precio</option>
+                        <option value="acerca">Plazo</option>
+                        <option value="servicios">Servicio</option>
+                        <option value="contacto">Embalaje</option>
+                        <option value="contacto">Calidad</option>
+                        <option value="contacto">Otros</option>
+                    </select>
+                </div>
+                <label for="menu-selector" id="mobile-menu-label">Selecciona una opción:</label>
+                <!--
+                    ACA TERMINA
+                -->
                 <div class="caja-checkbox">
                     <div>
                         <input type="checkbox" id="precio" name="ppto">
