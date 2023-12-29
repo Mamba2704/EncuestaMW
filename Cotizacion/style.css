@@ -19,7 +19,7 @@ body{
     flex-direction: column;
     gap: 50px;
     align-items: center;
-    background-image: url(fondo.png);
+    background-image: url(fondonaranja.png);
     background-size: contain;
 }
 
@@ -81,6 +81,7 @@ body{
     text-align:left;
     position: relative;
     z-index: 4;
+    border-radius: 0px 40px 0px 60px;
 }
 
 .caja-texto-libre{
@@ -436,7 +437,7 @@ button{
 
     .formulario{
         width: 100%;
-        padding: 20px;
+        padding: 0px;
         margin: 0px;
         gap: 30px;
         background-color: #f5f2f2;
@@ -465,6 +466,22 @@ button{
     .caja-padre{
         width: 98%;
         margin-top: 0px;
+	    padding: 0px;
+        padding-bottom: 10px;
+    }
+
+    .caja-hija{
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+        flex-direction: column;
+        justify-content: center;
+        text-align:left;
+        position: relative;
+        z-index: 4;
+    }
+    .linea-decorativa{
+        width: 85%;
     }
 
     #menu-selector {        /*hago visible el desplegable*/
@@ -498,8 +515,8 @@ button{
 @media only screen and (max-width: 300px) {
 
     .formulario{
-        width: 90%;
-        padding: 20px;
+        width: 100%;
+        padding: 0px;
         margin: 0px;
         gap: 30px;
         background-color: #f5f2f2;
@@ -526,11 +543,13 @@ button{
     }
 
     .caja-padre{
-        width: 90%;
+        width: 95%;
         margin-top: 0px;
         border-radius: 20px;
         max-width: 1000px;
         font-size: 1em;
+	    padding: 0px;
+        padding-bottom: 10px;
     }
 
     .caja-hija{
@@ -580,5 +599,3 @@ button{
     }
     
 }
-
-
