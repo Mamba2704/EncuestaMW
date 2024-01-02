@@ -1,0 +1,587 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-style: italic;
+    color: rgb(60, 58, 58);
+}
+
+.formulario{
+    background-color: grey;
+    width: 40%;
+    padding:5em 3em 3em 3em;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    background-image: url(fondo.png);
+    background-size: contain;
+}
+
+.caja-padre{
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 80px 25px 80px;
+    padding: 10px;
+    width: 80%;
+    max-height: 300px;
+    font-size: 1.2em;
+    box-shadow: 5px 2px 2px rgb(66, 62, 62);
+    position: relative;
+    z-index: 2;
+}
+
+/*CAJA PRUEBA PARA LOGO*/
+.cajaprueba{
+    position: absolute;
+    top: -80px;
+    left: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px 60px 25px 50px;
+    padding: 5px;
+    width: 25vw;        /*SIEMPRE EL CONTENEDOR VA A OCUPAR EL 25% DEL ANCHO DE LA PANTALLA*/
+    height: 100px;
+    font-size: 1.3em;
+    max-width: 1000px;
+    min-width: 250px;
+    z-index: 3;
+}
+
+.cajaprueba img{
+    width: 100%;                /*EL LOGO OCUPA EL 100% DEL CONTENEDOR */
+    width: 250px;               /*LE DEFINO UNA MEDIDA AL LOGO*/
+    height: 80px;
+}
+
+.caja-logo{
+    display: none;
+}
+
+.linea-decorativa{
+    border: 10px solid white;
+    border-radius: 25px 80px 20px 80px;
+    border-color: transparent transparent #e1850b transparent; 
+    padding: 10px;
+    width: 90%;
+    position: relative;
+    z-index: 3;
+}
+
+.caja-hija{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+    flex-direction: column;
+    justify-content: center;
+    text-align:left;
+    position: relative;
+    z-index: 4;
+    border-radius: 0px 40px 0px 60px;
+}
+
+.caja-texto-libre{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+textarea{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 50px;
+    max-width: 80%;
+    margin: 5px;
+}
+
+/*RADIO*/
+
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #e6e6e6;
+    -webkit-text-stroke: 0.4px black;
+}
+
+.radio .rojo{
+    display: inline-flex;
+    cursor: pointer;
+    margin: 2px;
+	width: 35px;
+	height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgb(186, 40, 40);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.radio .amarillo{
+    display: inline-flex;
+    cursor: pointer;
+    margin: 2px;
+	width: 35px;
+	height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgb(192, 192, 22);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.radio .verde{
+    display: inline-flex;
+    cursor: pointer;
+    margin: 2px;
+	width: 35px;
+	height: 35px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgb(0, 189, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.radio input[type="radio"] {                /*elimina el selector del puntaje redondito :)*/
+    display: none;
+}
+
+.radio .rojo:hover {                        /*ESTO CONTROLA EL COLOR QUE TOMAN LOS REDONDITOS CUANDO PASAMOS EL CURSOR*/
+	background-color: rgb(255, 0, 0);
+}
+
+.radio .amarillo:hover {
+	background-color: rgb(255, 247, 0);
+}
+
+.radio .verde:hover {
+	background-color: rgb(66, 255, 88);
+}
+
+.radio input[type="radio"].rojo:checked + label {       /*ESTO CONTROLA EL COLOR CUANDO HACEMOS CLICK(UNO POR CADA COLOR)*/
+    background-color: rgb(255, 0, 0);	
+}
+
+.radio input[type="radio"].amarillo:checked + label {
+    background-color: rgb(255, 247, 0);	
+}
+
+.radio input[type="radio"].verde:checked + label {
+    background-color: rgb(66, 255, 88);	
+}
+
+#comentario{
+    font-size: 0.7em;                                /*esto aplica solo a la parte del puntaje*/
+    font-weight: bold;
+    text-align: center;
+}
+
+/* CHECKBOX*/
+.caja-checkbox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.caja-checkbox div{
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+/*BOTON ENVIAR*/
+
+.caja-boton{
+    background-color: white;
+    width: 20%;
+    padding: 5px ;
+    border-radius: 10px ;
+    display: flex; 
+    align-items: center;
+    justify-content: center;  
+    box-shadow: 5px 2px 2px rgb(66, 62, 62);
+}
+
+button{
+    border: none;
+    background-color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #4b4b4b;
+    font-size: 1vw;
+    font-style: oblique;
+    letter-spacing:0.1vw;
+}
+/*menu selector de prueba para dispositivos pequeños, aca lo oculto en la version de escritorio*/
+#mobile-menu-label{     /*oculto el "seleccione una opcion"*/
+    display: none;
+}
+
+#menu-selector {        /*oculto el desplegable*/
+    display: none;
+}
+
+/*MEDIA QUERY*/
+
+@media only screen and (min-width: 1700px){
+    .cajaprueba{
+        width: 10vw;
+    }
+
+    .caja-padre{
+        width: 70%;
+        max-height: 500px;
+    }
+    
+    .caja-texto-libre{
+        display: flex;
+        justify-content: center;
+    }
+    
+    textarea{
+        max-width: 85%;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1700px){
+    .cajaprueba{
+        width: 10vw;
+    }
+
+    .caja-padre{
+        width: 80%;
+        max-height: 500px;
+    }
+    
+    .caja-texto-libre{
+        display: flex;
+        justify-content: center;
+    }
+    
+    textarea{
+        max-width: 85%;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .cajaprueba{
+        width: 20vw;
+        max-height: 300px;
+    }
+
+    .radio .rojo{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .radio .amarillo{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .radio .verde{
+        width: 30px;
+        height: 30px;
+    }
+
+    .caja-checkbox{
+        font-size: 0.7em;
+    }
+    
+    .caja-checkbox div{
+        margin: 5px;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px){
+    .radio .rojo{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .radio .amarillo{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .radio .verde{
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .caja-checkbox{
+        font-size: 0.7em;
+    }
+    
+    .caja-checkbox div{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .caja-boton{
+        width: 25%;
+        padding: 5px ;
+    }
+    
+    button{
+        font-size: 1.2vw;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width: 1000px) { /*Estaria bueno poner no recomendable, 
+                                                                reconmendable, muy recomendable, etc en vez de nros en el selector*/
+    #menu-selector {        /*hago visible el desplegable*/
+        display: block;
+        align-self: center;
+        width: 70%;
+        height: 40px;
+        padding: 5px;
+        border: 1px solid rgb(107, 105, 105);
+        border-radius: 5px;
+    }
+
+    .caja-checkbox{         /*oculto el checkbox*/
+        display: none;
+    }
+
+    .radio{
+        display: none;      /*OCULTO EL SELECTOR REDONDITO*/
+    }
+
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 900px){
+    .formulario{
+        width: 90%;
+    }
+
+    .caja-padre{
+        width: 80%;
+        max-height: 1000px;
+    }
+
+    #comentario{
+       text-align: end;
+    }
+
+    .linea-decorativa{
+        width: 90%;
+        padding: 5px;
+    }
+
+    .cajaprueba{
+        width: 200px;        /*adapto el logo porque quedaba corrido*/
+        min-width: 100px;
+    }
+    
+    .cajaprueba img{            
+        width: 190px;              
+        height: 60px;
+    }
+
+    #menu-selector {        /*hago visible el desplegable*/
+        display: block;
+        align-self: center;
+        width: 70%;
+        height: 40px;
+        padding: 5px;
+        border: 1px solid rgb(107, 105, 105);
+        border-radius: 5px;
+    }
+
+    .caja-checkbox{         /*oculto el checkbox*/
+        display: none;
+    }
+
+    .radio{
+        display: none;      /*OCULTO EL SELECTOR REDONDITO*/
+    }
+
+    .caja-texto-libre{
+        justify-content: center;
+    }
+
+    textarea{
+        max-width: 80%;
+        width: 80%;
+    }
+
+    .caja-boton{
+        width: 25%;
+        height: 20px;
+    }
+    
+    button{
+        font-size: 1.5vw;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 575px) {
+
+    .formulario{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        gap: 30px;
+        background-color: #f5f2f2;
+        background-image: none;
+    }
+
+    /*PRUEBA DE LOGO EN DISPOSITIVOS PEQUEÑOS*/
+    .caja-logo{
+        display: block;
+        box-sizing: border-box;
+        width:200px;
+        height:200px;
+        background-color: #f5f2f2;
+    }
+    
+    .caja-logo img{
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .cajaprueba{        /*QUITO EL LOGO ORIGINAL PARA PONER EL OTRO*/
+        display: none;
+    }
+
+    .caja-padre{
+        width: 98%;
+        margin-top: 0px;
+	padding: 0px;
+        padding-bottom: 10px;
+    }
+
+    #menu-selector {        /*hago visible el desplegable*/
+        display: block;
+        align-self: center;
+        width: 70%;
+        height: 40px;
+        padding: 5px;
+        border: 1px solid rgb(107, 105, 105);
+        border-radius: 5px;
+    }
+
+    .caja-checkbox{         /*oculto el checkbox*/
+        display: none;
+    }
+
+    .radio{
+        display: none;      /*OCULTO EL SELECTOR REDONDITO*/
+    }
+
+    .caja-boton{
+        width: 40%;
+        height: 20px;
+    }
+    
+    button{
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .formulario{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        gap: 30px;
+        background-color: #f5f2f2;
+        background-image: none;
+    }
+
+    /*PRUEBA DE LOGO EN DISPOSITIVOS PEQUEÑOS*/
+    .caja-logo{
+        display: block;
+        box-sizing: border-box;
+        width:200px;
+        height:200px;
+        background-color: #f5f2f2;
+    }
+    
+    .caja-logo img{
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .cajaprueba{        /*QUITO EL LOGO ORIGINAL PARA PONER EL OTRO*/
+        display: none;
+    }
+
+    .caja-padre{
+        width: 90%;
+        margin-top: 0px;
+        border-radius: 20px;
+        max-width: 1000px;
+        font-size: 1em;
+	    padding: 0px;
+        padding-bottom: 10px;
+    }
+
+    .caja-hija{
+        text-align: center;
+        max-width: 1000px;
+    
+    }
+
+    .linea-decorativa{
+        border-radius: 10px;
+        width: 80%;
+    }
+
+    #menu-selector {        /*hago visible el desplegable*/
+        display: block;
+        align-self: center;
+        width: 70%;
+        height: 30px;
+        padding: 5px;
+        border: 1px solid rgb(107, 105, 105);
+        border-radius: 5px;
+    }
+
+    .caja-checkbox{         /*oculto el checkbox*/
+        display: none;
+    }
+
+    .radio{
+        display: none;      /*OCULTO EL SELECTOR REDONDITO*/
+    }
+
+    .caja-boton{
+        width: 40%;
+        height: 20px;
+    }
+    
+    button{
+        font-size: 4vw;
+    }
+    
+    textarea{
+        width: 100%;
+    }
+
+    #comentario{
+        font-size: 4vw;
+    }
+    
+}
