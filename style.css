@@ -43,7 +43,7 @@ body{
     align-items: center;
     background-image: url(fondonaranja.png);
     background-size: contain;
-    flex: 0 2 900px;
+    flex: 0 1 900px;
 }
 
 .caja-padre{
