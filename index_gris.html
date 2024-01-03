@@ -24,7 +24,7 @@
                 </div>-->
 
                 <div class="caja-hija">                         
-                    <p>Basándote en tu experiencia con el último pedido recibido, ¿Cuánto recomendarías Marlew a un colega? *</p>
+                    <p>Basándote en tu experiencia con el último pedido recibido ¿Cuánto recomendarías Marlew a un colega? *</p>
                 </div>
                 <div class="caja-hija">
                     <!--
@@ -73,7 +73,7 @@
                         <label for="ppto10" class="verde">10</label>
                     </div>
                     <div id="comentario">
-                        <p>(0 es Nada Recomendable y 10 Altamente Recomendable)</p>
+                        <p>*0 es Nada Recomendable y 10 Altamente Recomendable</p>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
         <div class="caja-padre">                                <!--SEGUNDA CAJA PADRE-->
             <div class="linea-decorativa">
                 <div class="caja-hija">                         
-                    <p>¿Qué parte de tu experiencia, es la principal responsable de tu puntuación?</p>
+                    <p>¿Qué parte de tu experiencia es la principal responsable de tu puntuación?</p>
                 </div>
                 <!--
                     ACA VA EL SELECTOR DESPLEGABLE DE PRUEBA PARA DISPOSITIVOS PEQUEÑOS
@@ -102,23 +102,23 @@
                 -->
                 <div class="caja-checkbox">
                     <div>
-                        <input type="checkbox" id="precio" name="ppto">
+                        <input type="checkbox" id="precio" name="ppto" onclick="onlyOne(this)">
                         <label for="precio">Cumplimiento de plazo de entrega</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="plazo">
+                        <input type="checkbox" name="ppto" id="plazo" onclick="onlyOne(this)">
                         <label for="atencion">Embalaje</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="servicio">
+                        <input type="checkbox" name="ppto" id="servicio" onclick="onlyOne(this)">
                         <label for="servicio">Calidad del producto</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="embalaje">
+                        <input type="checkbox" name="ppto" id="embalaje" onclick="onlyOne(this)">
                         <label for="rapidez">Atención y seguimiento recibido</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="otros">
+                        <input type="checkbox" name="ppto" id="otros" onclick="onlyOne(this)">
                         <label for="otros">Otros</label>
                     </div>
                 </div>
@@ -143,4 +143,5 @@
         <button class="button">Enviar</button>
     </form>
 </body>
+<script src="/script.js"></script>
 </html>

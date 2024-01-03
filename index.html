@@ -105,23 +105,23 @@
                 -->
                 <div class="caja-checkbox">
                     <div>
-                        <input type="checkbox" id="precio" name="asesoramiento">
+                        <input type="checkbox" id="precio" name="ppto" onclick="onlyOne(this)">
                         <label for="precio">Asesoramiento técnico</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="precio">
+                        <input type="checkbox" name="ppto" id="precio" onclick="onlyOne(this)">
                         <label for="rapidez">Precio</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="cotizacion">
+                        <input type="checkbox" name="ppto" id="cotizacion" onclick="onlyOne(this)">
                         <label for="atencion">Velocidad de cotización</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="entrega">
+                        <input type="checkbox" name="ppto" id="entrega" onclick="onlyOne(this)">
                         <label for="servicio">Plazo de entrega del producto</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="otro">
+                        <input type="checkbox" name="ppto" id="otro" onclick="onlyOne(this)">
                         <label for="rapidez">Otros</label>
                     </div>
                 </div>
@@ -150,4 +150,5 @@
 
     </div>
 </body>
+<script src="/script.js"></script>
 </html>
