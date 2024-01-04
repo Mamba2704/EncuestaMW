@@ -113,6 +113,11 @@ body{
     margin: 5px;
 }
 
+#textarea1{
+    visibility: hidden;
+}
+
+
 textarea{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
