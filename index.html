@@ -96,7 +96,7 @@
                         <option value="acerca">Precio</option>
                         <option value="servicios">Velocidad de cotización</option>
                         <option value="contacto">Plazo de entrega del producto</option>
-                        <option value="contacto">Otros</option>
+                        <option value="contacto" name="checkotrosmovil">Otros</option>
                     </select>
                 </div>
                 <label for="menu-selector" id="mobile-menu-label">Selecciona una opción:</label>
@@ -105,28 +105,28 @@
                 -->
                 <div class="caja-checkbox">
                     <div>
-                        <input type="checkbox" id="precio" name="ppto" onclick="onlyOne(this)">
+                        <input type="checkbox" id="precio" name="ppto">
                         <label for="precio">Asesoramiento técnico</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="precio" onclick="onlyOne(this)">
+                        <input type="checkbox" name="ppto" id="precio">
                         <label for="rapidez">Precio</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="cotizacion" onclick="onlyOne(this)">
+                        <input type="checkbox" name="ppto" id="cotizacion">
                         <label for="atencion">Velocidad de cotización</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="entrega" onclick="onlyOne(this)">
+                        <input type="checkbox" name="ppto" id="entrega">
                         <label for="servicio">Plazo de entrega del producto</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="ppto" id="otro" onclick="onlyOne(this)">
+                        <input type="checkbox" name="checkotros" id="checkotros">
                         <label for="rapidez">Otros</label>
                     </div>
                 </div>
                 <div class="caja-texto-libre">
-                    <textarea rows="2" cols="43" placeholder="Escriba su respuesta aquí ... " value=""></textarea>
+                    <textarea id="textarea1" rows="2" cols="43" placeholder="Escriba su respuesta aquí ... " value="" id="textareaotros"></textarea>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="caja-hija">
                     <div class="caja-texto-libre">
-                        <textarea cols="120" style="max-width:80%;" placeholder="Escriba su respuesta aquí ... " value=""></textarea>
+                        <textarea id="textarea2" cols="120" style="max-width:80%;" placeholder="Escriba su respuesta aquí ... " value=""></textarea>
                     </div>
                 </div>
             </div>

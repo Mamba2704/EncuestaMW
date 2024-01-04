@@ -1,6 +1,11 @@
-function onlyOne(checkbox) {
-    var checkboxes = document.getElementsByName('ppto')
-    checkboxes.forEach((item) => {
-        if (item !== checkbox) item.checked = false
-    })
-}
+const checkbox = document.getElementById('checkotros');
+
+const textarea = document.getElementById('textarea1');
+
+checkbox.addEventListener('click', function handleClick() {
+  if (checkbox.checked) {
+    textarea.style.visibility = 'visible';
+  } else {
+    textarea.style.visibility = 'hidden';
+  }
+});
