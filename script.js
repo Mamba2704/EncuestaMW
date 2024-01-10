@@ -11,6 +11,7 @@ checkbox.addEventListener('click', function handleClick() {
   }
 });
 
+
  function otrosTextarea(index) {
   if (index === 4) {
     textarea.style.visibility = 'visible';
