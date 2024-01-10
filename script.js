@@ -41,11 +41,121 @@ selector.addEventListener('change', function handleClick() {
 
 //validaciones de campos
 
+
 const puntajelist = document.getElementsByName('puntaje');
 const checkboxlist = document.getElementsByName('check');
+const puntajeMovilList = document.getElementsByName('puntajemovil');
+const checkboxMovilList = document.getElementsByName('checkmovil');
 const button = document.getElementById('button');
 
-button.addEventListener('click', function verificacion(listapuntaje) {
+
+button.addEventListener('click', function verificacionesCampos() {
+  if (esMovil()){
+    verificacionesMovil(puntajeMovilList,checkboxMovilList)
+  } else {
+    verificacionesPC(puntajelist, checkboxlist)
+  }
+});
+
+//verifica si es la version movil, viendo el display de la caja de texto
+function esMovil(){
+
+}
+
+function verificacionesMovil(listapuntajemovil, listacheckboxmovil){
+  verificacionCamposCompletos(listapuntajemovil, listacheckboxmovil)
+}
+
+function verificacionCamposCompletos(listapuntaje,listacheckbox) {
+  const puntajeChecked = verificacionPuntaje(listapuntaje);
+  const checkChecked = verificacionCheck(listacheckbox);
+
+  if (!puntajeChecked || !checkChecked) {
+    alert('Por favor, seleccione un puntaje y marque al menos una opción :(:(');
+  }
+}
+
+function verificacionPuntaje(lista){
+  let puntajeAlgunoChecked = false;
+  lista.forEach(radio => {
+    if (radio.checked) {
+      puntajeAlgunoChecked = true;
+    }
+  })
+  return puntajeAlgunoChecked;
+}
+
+function verificacionCheck(lista){
+  let checkAlgunoChecked = false;
+  lista.forEach(check => {
+    if (check.checked) {
+      checkAlgunoChecked = true;
+    }
+  })
+  return checkAlgunoChecked;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+const puntajelist = document.getElementsByName('puntaje');
+const checkboxlist = document.getElementsByName('check');
+const puntajeMovilList = document.getElementsByName('puntajemovil');
+const checkboxMovilList = document.getElementsByName('checkmovil');
+const button = document.getElementById('button');
+
+function verificacionPuntaje(){
+  let puntajeAlgunoChecked = false;
+  puntajelist.forEach(radio => {
+    if (radio.checked) {
+      puntajeAlgunoChecked = true;
+    }
+  })
+  return puntajeAlgunoChecked;
+}
+
+function verificacionCheck(){
+  let checkAlgunoChecked = false;
+  checkboxlist.forEach(check => {
+    if (check.checked) {
+      checkAlgunoChecked = true;
+    }
+  })
+  return checkAlgunoChecked;
+}
+
+function verificacionCamposCompletos() {
+  const puntajeChecked = verificacionPuntaje();
+  const checkChecked = verificacionCheck();
+
+  if (!puntajeChecked || !checkChecked) {
+    alert('Por favor, seleccione un puntaje y marque al menos una opción :(:(');
+  }
+}
+
+button.addEventListener('click', function verificacionesCampos() {
+  verificacionCamposCompletos();
+});
+*/
+
+
+
+
+
+
+
+
+
+/*
+button.addEventListener('click', function verificacion() {
   let puntajeAlgunoChecked = false;
   let checkAlgunoChecked = false;
 
@@ -65,6 +175,7 @@ button.addEventListener('click', function verificacion(listapuntaje) {
     alert('Por favor, seleccione un puntaje y marque al menos una opción :(:(');
   }
 });
+*/
 
 
 
