@@ -11,6 +11,13 @@ checkbox.addEventListener('click', function handleClick() {
   }
 });
 
+checkbox.addEventListener('touchstart', function handleClick() {
+  if (checkbox.checked) {
+    textarea.style.visibility = 'visible';
+  } else {
+    textarea.style.visibility = 'hidden';
+  }
+});
 
  function otrosTextarea(index) {
   if (index === 4) {
