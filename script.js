@@ -42,31 +42,29 @@ selector.addEventListener('change', function handleClick() {
 //validaciones de campos
 
 
-const puntajelist = document.getElementsByName('puntaje');
-const checkboxlist = document.getElementsByName('check');
+const puntajeList = document.getElementsByName('puntaje');
+const checkboxList = document.getElementsByName('check');
 const puntajeMovilList = document.getElementsByName('puntajemovil');
 const checkboxMovilList = document.getElementsByName('checkmovil');
 const button = document.getElementById('button');
+const cajaCheckbox = document.getElementById('caja-checkbox')
 
 
 button.addEventListener('click', function verificacionesCampos() {
   if (esMovil()){
-    verificacionesMovil(puntajeMovilList,checkboxMovilList)
+    verificacionesPuntajeYCheckboxMovil(puntajeMovilList,checkboxMovilList)
   } else {
-    verificacionesPC(puntajelist, checkboxlist)
+    verificacionesPuntajeYCheckbox(puntajeList, checkboxList)
   }
 });
 
 //verifica si es la version movil, viendo el display de la caja de texto
 function esMovil(){
-
+  window.getComputedStyle(cajaCheckbox).getPropertyValue("display") == 'none'
 }
 
-function verificacionesMovil(listapuntajemovil, listacheckboxmovil){
-  verificacionCamposCompletos(listapuntajemovil, listacheckboxmovil)
-}
-
-function verificacionCamposCompletos(listapuntaje,listacheckbox) {
+//verifica que tanto el puntaje como el checkbox tengan al menos una opcion seleccionada
+function verificacionesPuntajeYCheckbox(listapuntaje,listacheckbox) {
   const puntajeChecked = verificacionPuntaje(listapuntaje);
   const checkChecked = verificacionCheck(listacheckbox);
 
@@ -75,6 +73,7 @@ function verificacionCamposCompletos(listapuntaje,listacheckbox) {
   }
 }
 
+//verifica que haya al menos un puntaje seleccionado
 function verificacionPuntaje(lista){
   let puntajeAlgunoChecked = false;
   lista.forEach(radio => {
@@ -85,6 +84,7 @@ function verificacionPuntaje(lista){
   return puntajeAlgunoChecked;
 }
 
+//verifica que haya al menos un checkbox seleccionado
 function verificacionCheck(lista){
   let checkAlgunoChecked = false;
   lista.forEach(check => {
