@@ -41,7 +41,6 @@ selector.addEventListener('change', function handleClick() {
 
 //validaciones de campos
 
-
 const puntajeList = document.getElementsByName('puntaje');
 const checkboxList = document.getElementsByName('check');
 const puntajeMovilList = document.getElementsByName('puntajemovil');
@@ -94,8 +93,6 @@ function verificacionCheck(lista){
   })
   return checkAlgunoChecked;
 }
-
-
 
 
 
