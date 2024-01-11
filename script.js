@@ -47,23 +47,18 @@ const puntajeMovilList = document.getElementsByName('puntajemovil');
 const checkboxMovilList = document.getElementsByName('checkmovil');
 const button = document.getElementById('button');
 const cajaCheckbox = document.getElementById('caja-checkbox')
-
+const esMovil = window.getComputedStyle(cajaCheckbox).getPropertyValue("display") == 'none'
 
 button.addEventListener('click', function verificacionesCampos() {
-  if (esMovil()){
+  if (esMovil){
     verificacionesPuntajeYCheckboxMovil(puntajeMovilList,checkboxMovilList)
   } else {
     verificacionesPuntajeYCheckbox(puntajeList, checkboxList)
   }
 });
 
-//verifica si es la version movil, viendo el display de la caja de texto
-function esMovil(){
-  window.getComputedStyle(cajaCheckbox).getPropertyValue("display") == 'none'
-}
-
 //verifica que tanto el puntaje como el checkbox tengan al menos una opcion seleccionada
-function verificacionesPuntajeYCheckbox(listapuntaje,listacheckbox) {
+function verificacionesPuntajeYCheckboxMovil(listapuntaje,listacheckbox) {
   const puntajeChecked = verificacionPuntaje(listapuntaje);
   const checkChecked = verificacionCheck(listacheckbox);
 
@@ -76,7 +71,7 @@ function verificacionesPuntajeYCheckbox(listapuntaje,listacheckbox) {
 function verificacionPuntaje(lista){
   let puntajeAlgunoChecked = false;
   lista.forEach(radio => {
-    if (radio.checked) {
+    if (radio.selected) {
       puntajeAlgunoChecked = true;
     }
   })
@@ -87,18 +82,12 @@ function verificacionPuntaje(lista){
 function verificacionCheck(lista){
   let checkAlgunoChecked = false;
   lista.forEach(check => {
-    if (check.checked) {
+    if (check.selected) {
       checkAlgunoChecked = true;
     }
   })
   return checkAlgunoChecked;
 }
-
-
-
-
-
-
 
 
 
@@ -173,6 +162,7 @@ button.addEventListener('click', function verificacion() {
   }
 });
 */
+
 
 
 
